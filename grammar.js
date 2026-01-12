@@ -72,6 +72,7 @@ module.exports = grammar({
 
 		_expression: $ => choice(
 			$.code_block,
+			$.grouped_expression,
 			$.class_def,
 			seq($._expression_statement, ";"),
 		),
@@ -95,7 +96,7 @@ module.exports = grammar({
 			prec(20, $.function_call),
 			$.association,
 			$.nil_check,
-			$.code_block,
+			$.grouped_expression,
 			$.function_block,
 			$.control_structure,
 			$.literal,
@@ -199,9 +200,23 @@ module.exports = grammar({
 			optional(";")
 		),
 
+		// Parenthesized expression for arithmetic grouping: (a + b)
+		// Does NOT create a runnable region
+		grouped_expression: $ => seq(
+			'(',
+			$._expression_statement,
+			')'
+		),
+
+		// Evaluable code block - requires at least one semicolon
+		// Example: (x = 1; y = 2; x + y)
+		// This creates a runnable region in the editor
 		code_block: $ => seq(
 			'(',
-			optional($._expression_sequence),
+			seq(
+				repeat1(seq($._expression_statement, ";")),
+				optional($._expression_statement)
+			),
 			')'
 		),
 
@@ -256,8 +271,8 @@ module.exports = grammar({
 			field("name", $.identifier),
 			field("value", optional(
 				choice(
-					seq("=", choice($.literal, $.collection, $.code_block)),
-					$.code_block,
+					seq("=", choice($.literal, $.collection, $.grouped_expression)),
+					$.grouped_expression,
 					// seq("(", $.literal, ")")
 				)
 			))
@@ -816,7 +831,7 @@ module.exports = grammar({
 			),
 			prec.right(seq(
 				field("name", "switch"),
-				$.code_block,
+				$.grouped_expression,
 				// "(", $._object, ")",
 				repeat(
 					seq(

@@ -18,19 +18,15 @@
         "required": false,
         "types": [
           {
-            "type": "(",
-            "named": false
-          },
-          {
-            "type": ")",
-            "named": false
-          },
-          {
             "type": "=",
             "named": false
           },
           {
             "type": "collection",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -69,7 +65,39 @@
       "required": true,
       "types": [
         {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "code_block",
+          "named": true
+        },
+        {
+          "type": "control_structure",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "indexed_collection",
+          "named": true
+        },
+        {
+          "type": "nil_check",
+          "named": true
+        },
+        {
           "type": "number",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
           "named": true
         }
       ]
@@ -96,10 +124,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -108,11 +132,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -186,10 +218,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -198,11 +226,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -312,11 +348,27 @@
             "named": false
           },
           {
+            "type": "@",
+            "named": false
+          },
+          {
+            "type": "@@",
+            "named": false
+          },
+          {
+            "type": "@|@",
+            "named": false
+          },
+          {
             "type": "method_name",
             "named": true
           },
           {
             "type": "|",
+            "named": false
+          },
+          {
+            "type": "|@|",
             "named": false
           },
           {
@@ -342,10 +394,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -354,11 +402,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -502,10 +558,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -518,11 +570,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -586,7 +646,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "association",
@@ -598,10 +658,6 @@
         },
         {
           "type": "class",
-          "named": true
-        },
-        {
-          "type": "code_block",
           "named": true
         },
         {
@@ -626,6 +682,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -696,10 +756,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -712,11 +768,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -827,10 +891,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -839,11 +899,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -889,10 +957,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -901,11 +965,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -1036,10 +1108,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1061,6 +1129,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1172,6 +1244,93 @@
     }
   },
   {
+    "type": "grouped_expression",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "association",
+          "named": true
+        },
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "class",
+          "named": true
+        },
+        {
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "control_structure",
+          "named": true
+        },
+        {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
+          "type": "function_block",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
+          "named": true
+        },
+        {
+          "type": "indexed_collection",
+          "named": true
+        },
+        {
+          "type": "literal",
+          "named": true
+        },
+        {
+          "type": "nil_check",
+          "named": true
+        },
+        {
+          "type": "partial",
+          "named": true
+        },
+        {
+          "type": "return_statement",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        },
+        {
+          "type": "variable_definition",
+          "named": true
+        },
+        {
+          "type": "variable_definition_sequence",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "if",
     "named": true,
     "fields": {
@@ -1192,10 +1351,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -1204,11 +1359,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -1282,6 +1445,53 @@
     }
   },
   {
+    "type": "index_subrange",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "binary_expression",
+          "named": true
+        },
+        {
+          "type": "code_block",
+          "named": true
+        },
+        {
+          "type": "control_structure",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "indexed_collection",
+          "named": true
+        },
+        {
+          "type": "nil_check",
+          "named": true
+        },
+        {
+          "type": "number",
+          "named": true
+        },
+        {
+          "type": "unary_expression",
+          "named": true
+        },
+        {
+          "type": "variable",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "indexed_collection",
     "named": true,
     "fields": {
@@ -1290,15 +1500,39 @@
         "required": true,
         "types": [
           {
-            "type": "..",
-            "named": false
-          },
-          {
-            "type": "integer",
+            "type": "binary_expression",
             "named": true
           },
           {
-            "type": "literal",
+            "type": "code_block",
+            "named": true
+          },
+          {
+            "type": "control_structure",
+            "named": true
+          },
+          {
+            "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "index_subrange",
+            "named": true
+          },
+          {
+            "type": "indexed_collection",
+            "named": true
+          },
+          {
+            "type": "nil_check",
+            "named": true
+          },
+          {
+            "type": "number",
+            "named": true
+          },
+          {
+            "type": "unary_expression",
             "named": true
           },
           {
@@ -1312,6 +1546,26 @@
       "multiple": false,
       "required": true,
       "types": [
+        {
+          "type": "code_block",
+          "named": true
+        },
+        {
+          "type": "collection",
+          "named": true
+        },
+        {
+          "type": "control_structure",
+          "named": true
+        },
+        {
+          "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "string",
+          "named": true
+        },
         {
           "type": "variable",
           "named": true
@@ -1382,10 +1636,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1394,11 +1644,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1431,6 +1689,7 @@
   {
     "type": "line_comment",
     "named": true,
+    "extra": true,
     "fields": {}
   },
   {
@@ -1512,10 +1771,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1537,6 +1792,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1615,10 +1874,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -1627,11 +1882,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -1691,10 +1954,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1703,11 +1962,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1829,10 +2096,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1841,11 +2104,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1896,10 +2167,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -1908,11 +2175,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -1945,6 +2220,7 @@
   {
     "type": "source_file",
     "named": true,
+    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -1992,6 +2268,10 @@
         },
         {
           "type": "function_definition",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -2080,10 +2360,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -2092,11 +2368,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -2184,10 +2468,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -2196,11 +2476,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -2252,10 +2540,6 @@
           "named": true
         },
         {
-          "type": "code_block",
-          "named": true
-        },
-        {
           "type": "collection",
           "named": true
         },
@@ -2264,11 +2548,19 @@
           "named": true
         },
         {
+          "type": "duplicated_statement",
+          "named": true
+        },
+        {
           "type": "function_block",
           "named": true
         },
         {
           "type": "function_call",
+          "named": true
+        },
+        {
+          "type": "grouped_expression",
           "named": true
         },
         {
@@ -2360,10 +2652,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -2372,11 +2660,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -2457,10 +2753,6 @@
             "named": true
           },
           {
-            "type": "code_block",
-            "named": true
-          },
-          {
             "type": "collection",
             "named": true
           },
@@ -2469,11 +2761,19 @@
             "named": true
           },
           {
+            "type": "duplicated_statement",
+            "named": true
+          },
+          {
             "type": "function_block",
             "named": true
           },
           {
             "type": "function_call",
+            "named": true
+          },
+          {
+            "type": "grouped_expression",
             "named": true
           },
           {
@@ -2527,10 +2827,6 @@
         ]
       }
     }
-  },
-  {
-    "type": " ",
-    "named": false
   },
   {
     "type": "!",
@@ -2689,143 +2985,15 @@
     "named": false
   },
   {
+    "type": "@",
+    "named": false
+  },
+  {
     "type": "@@",
     "named": false
   },
   {
     "type": "@|@",
-    "named": false
-  },
-  {
-    "type": "Array",
-    "named": false
-  },
-  {
-    "type": "Array2D",
-    "named": false
-  },
-  {
-    "type": "ArrayedCollection",
-    "named": false
-  },
-  {
-    "type": "Bag",
-    "named": false
-  },
-  {
-    "type": "Dictionary",
-    "named": false
-  },
-  {
-    "type": "DoubleArray",
-    "named": false
-  },
-  {
-    "type": "Environment",
-    "named": false
-  },
-  {
-    "type": "Event",
-    "named": false
-  },
-  {
-    "type": "FloatArray",
-    "named": false
-  },
-  {
-    "type": "IdentityBag",
-    "named": false
-  },
-  {
-    "type": "IdentityDictionary",
-    "named": false
-  },
-  {
-    "type": "IdentitySet",
-    "named": false
-  },
-  {
-    "type": "Int16Array",
-    "named": false
-  },
-  {
-    "type": "Int32Array",
-    "named": false
-  },
-  {
-    "type": "Int8Array",
-    "named": false
-  },
-  {
-    "type": "LazyEnvir",
-    "named": false
-  },
-  {
-    "type": "LinkedList",
-    "named": false
-  },
-  {
-    "type": "List",
-    "named": false
-  },
-  {
-    "type": "MultiLevelIdentityDictionary",
-    "named": false
-  },
-  {
-    "type": "ObjectTable",
-    "named": false
-  },
-  {
-    "type": "Order",
-    "named": false
-  },
-  {
-    "type": "OrderedIdentitySet",
-    "named": false
-  },
-  {
-    "type": "Pair",
-    "named": false
-  },
-  {
-    "type": "PriorityQueue",
-    "named": false
-  },
-  {
-    "type": "RawArray",
-    "named": false
-  },
-  {
-    "type": "SequenceableCollection",
-    "named": false
-  },
-  {
-    "type": "Set",
-    "named": false
-  },
-  {
-    "type": "Signal",
-    "named": false
-  },
-  {
-    "type": "SortedList",
-    "named": false
-  },
-  {
-    "type": "SparseArray",
-    "named": false
-  },
-  {
-    "type": "String",
-    "named": false
-  },
-  {
-    "type": "SymbolArray",
-    "named": false
-  },
-  {
-    "type": "TwoWayIdentityDictionary",
     "named": false
   },
   {
@@ -2854,7 +3022,8 @@
   },
   {
     "type": "block_comment",
-    "named": true
+    "named": true,
+    "extra": true
   },
   {
     "type": "case",

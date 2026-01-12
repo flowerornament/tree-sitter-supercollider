@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT",
+    "authors": [
+      {
+        "name": "Mads Kjeldgaard"
+      }
+    ]
+  },
+  "grammars": [
+    {
+      "name": "supercollider",
+      "scope": "source.supercollider",
+      "file-types": ["scd", "sc"],
+      "path": "."
+    }
+  ]
+}
